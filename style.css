@@ -1,0 +1,348 @@
+/* --- General Styles --- */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    color: #333; /* Default text color for pages other than home */
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Header / Navigation Bar --- */
+header {
+    background-color: rgba(26, 31, 41, 0.8); /* Semi-transparent dark background */
+    backdrop-filter: blur(5px);
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1abc9c; /* Teal color on hover */
+}
+
+#search_bar {
+    display: flex;
+    align-items: center;
+}
+
+#search_bar input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+#search_bar button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btn_search {
+    background-color: #1abc9c;
+    color: white;
+}
+
+#btn_clear {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* --- Home Page Specific Styles --- */
+.home-page {
+    background-image: url('https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?q=80&w=2070&auto=format&fit=crop'); /* Replace with your desired image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+}
+
+#introduction {
+    max-width: 500px;
+    text-align: left;
+}
+
+#introduction h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+#introduction h2 {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+#btn_book {
+    background-color: #1abc9c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+/* --- Social Media Bar --- */
+#social {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+#social ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 24px; /* Adjust if using icon fonts */
+}
+
+/* --- Results Section --- */
+#result {
+    margin-top: 100px; /* Space from the header */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    color: #333; /* Set text color back to dark for cards */
+}
+
+.destination_card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+}
+
+.destination_card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination_card h3, .destination_card p {
+    padding: 0 15px;
+}
+
+.destination_card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.destination_card p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* --- Styles for About and Contact Pages --- */
+.about-section, .contact-section {
+    max-width: 800px;
+    margin: 120px auto 40px; /* Top margin to clear fixed header */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.team-section {
+     max-width: 1000px;
+     margin: 40px auto;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.team-member-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 30%;
+}
+.team-member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #1abc9c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Container chính cho trang About Us */
+.about-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Căn các khối theo phía trên */
+    gap: 40px; /* Khoảng cách giữa 2 khối */
+    padding: 20px;
+    margin-top: 100px; /* Khoảng cách với header */
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+}
+
+/* Thẻ chứa nội dung "ABOUT US" (Cột trái) */
+.about-content-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    flex: 1; /* Cho phép co giãn */
+    max-width: 400px; /* Giới hạn chiều rộng */
+}
+
+.about-content-card h2 {
+    margin-top: 0;
+    font-size: 28px;
+    border-bottom: 3px solid #1abc9c; /* Thêm đường gạch chân màu xanh */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.about-content-card p {
+    line-height: 1.7;
+}
+
+/* Toàn bộ khối "Our Team" (Cột phải) */
+.team-section {
+    flex: 2; /* Cho phép khối này rộng hơn */
+    max-width: 800px;
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Container chứa các thẻ thành viên */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+}
+
+/* Từng thẻ thành viên */
+.team-member-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 220px; /* Chiều rộng cố định cho mỗi thẻ */
+}
+
+.team-member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Bo tròn ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    margin-bottom: 15px;
+    border: 3px solid #eee;
+}
+
+.team-member-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+}
+
+.team-member-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #1abc9c; /* Cho chức vụ màu xanh */
+    font-weight: bold;
+}
+
+.team-member-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
